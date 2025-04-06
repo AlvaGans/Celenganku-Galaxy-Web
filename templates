@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celenganku Galaxy</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Saldo Kamu: Rp {{ saldo }}</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form action="/transaksi" method="post">
+            <input type="number" name="jumlah" placeholder="Jumlah" required>
+            <select name="jenis">
+                <option value="tambah">Tambah</option>
+                <option value="tarik">Tarik</option>
+            </select>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</body>
+</html>
