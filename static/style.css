@@ -1,0 +1,33 @@
+body {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+input, select, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.alert.success {
+    color: #4CAF50;
+}
+.alert.danger {
+    color: #f44336;
+}
